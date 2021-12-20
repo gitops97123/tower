@@ -1,0 +1,8 @@
+---
+- name: 
+  hosts:  blackhosts
+  tasks: 
+  - name: debug
+    debug: 
+      msg: "hello world"
+      
