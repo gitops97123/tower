@@ -1,19 +1,23 @@
 localhost 
 
-
-[dev]
-servera.example.com
-
-[test]
-serverb.example.com
+[haproxy_nodes]
 serverc.example.com
+serverd.example.com 
 
-[prod]
+[webserver]
+servera.example.com
+serverb.example.com
+
+[prod-servers]
+servera.example.com
+serverb.example.com
 serverd.example.com
-servere.example.com
+serverc.example.com
 
 [datacenter]
 serverf.example.com
 serverg.example.com
 
+[development]
+servera.example.com
 
