@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: localhost
+  hosts: prod-servers
   tasks: 
   - name: Display IP Address 
     debug: 
