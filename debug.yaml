@@ -1,0 +1,7 @@
+---
+- name: 
+  hosts: dev 
+  tasks: 
+  - name: Display IP Address 
+    debug: 
+      msg: "The server is live on {{ ansible_default_ipv4.address }}" 
