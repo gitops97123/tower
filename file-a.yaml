@@ -1,0 +1,17 @@
+---   # header 
+- name: Deploy Playbook 
+  hosts: dev
+  tasks:
+  - name: 1. entry in sudoers
+    copy: 
+      content: "student ALL=(ALL) NOPASSWD: ALL\n"
+      dest: /etc/sudoers.d/student
+  - name: 2. print output 
+    debug:
+      msg: "{{ ansible_default_ipv4.address }} {{ ansible_default_ipv4.alias }}"
+                # fact var
+  - name: 3. creating folder 
+    file: 
+      dest: /root/redhat 
+      state: directory
+...   # footer 

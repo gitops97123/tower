@@ -1,0 +1,16 @@
+---
+- name: NAME OF THE DEPLOYMENT 
+  hosts: NO. of Hosts 
+  tasks: 
+    - name: First task
+      file:
+        dest: 
+        state:
+    - name: Second task 
+      file:
+        dest:
+        state:
+    - name: Third task
+      file:
+        dest:
+        state:
