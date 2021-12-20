@@ -1,0 +1,19 @@
+---
+- name: Play with Modules 
+  hosts: dev 
+  tasks: 
+  - name: Creating a new directory 
+    file:
+      path: /tmp/sam
+      state: directory 
+  - name: Creating a new file in directory 
+    file: 
+      path: /tmp/sam/file.txt
+      state: touch 
+  - name: Changing ownership of the directory 
+    file: 
+      path: /tmp/sam
+      owner: student 
+      group: student 
+      mode: "0750"
+      recurse: yes

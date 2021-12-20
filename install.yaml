@@ -1,0 +1,11 @@
+---
+- name: 
+  hosts: dev 
+  tasks: 
+  - name: Removing vsftpd package
+    yum: name=vsftpd state=absent 
+
+  - name: Removing ftp package
+    yum:
+      name: ftp 
+      state: absent

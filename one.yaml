@@ -1,0 +1,16 @@
+---
+- name: DEPLOYMENT USING FILE MODULE
+  hosts: dev 
+  tasks: 
+  - name: create a new directory 
+    file:
+      path: /root/data 
+      state: directory 
+      owner: student
+      group: student
+      mode: 0755
+  - name: Creating content 
+    copy: 
+      content: "hello anuj\n"
+      dest: /root/data/file.txt 
+  

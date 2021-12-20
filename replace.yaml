@@ -1,0 +1,16 @@
+---
+- name: DEPLOYMENT USING FILE MODULE
+  hosts: dev 
+  tasks: 
+  - name: replacing name 
+    replace: 
+      path: /root/data/file.txt
+      regexp: 'anuj'
+      replace: 'Atul'
+  - name: 
+    lineinfile: 
+      path: /root/data/file.txt
+      insertbefore: 'hi atul'
+      line: 'hi sam' 
+       
+  

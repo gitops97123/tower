@@ -1,0 +1,18 @@
+---
+- name: 
+  hosts: dev 
+  tasks: 
+  - name: delete sonu user 
+    user: 
+      name: sonu 
+      remove: yes 
+      #password: '6jssuy5Tqgb0w'
+      #update_password: always
+      state: absent
+  - name: delete iftikar user 
+    user: 
+      name: iftikar 
+      remove: yes 
+     # password: '6jssuy5Tqgb0w'
+     # update_password: always
+      state: absent

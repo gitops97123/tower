@@ -1,0 +1,8 @@
+---
+- name: 
+  hosts: dev 
+  tasks: 
+  - name: copy content file2.txt 
+    copy: 
+      content: "hello test"
+      dest: /tmp/sam/file2.txt

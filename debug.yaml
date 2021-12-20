@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: prod-servers
+  hosts: prod-servers # dev haproxy_nodes development datacenter 
   tasks: 
   - name: Display IP Address 
     debug: 
