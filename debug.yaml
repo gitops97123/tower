@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: dev 
+  hosts: dev
   tasks: 
   - name: Display IP Address 
     debug: 
