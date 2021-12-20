@@ -1,7 +1,0 @@
----
-- name: 
-  hosts: development 
-  tasks: 
-  - name: 
-    shell:  ssh -i .ssh/id_rsa -o 'StrictHostKeyChecking no' -o 'UserKnownHostsFile /dev/null' "{{ansible_user}}"@"{{ansible_hostname}}"
-
