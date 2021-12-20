@@ -2,18 +2,18 @@ localhost
 
 
 [dev]
-servera
+servera.example.com
 
 [test]
-serverb
-serverc
+serverb.example.com
+serverc.example.com
 
 [prod]
-serverd
-servere
+serverd.example.com
+servere.example.com
 
 [datacenter]
-serverf
-serverg
+serverf.example.com
+serverg.example.com
 
 
