@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: dev
+  hosts: development
   tasks: 
   - name: Removing httpd packages
     yum: 
