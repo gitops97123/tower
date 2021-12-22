@@ -1,0 +1,8 @@
+--- 
+- name: 
+  hosts:  dev 
+  tasks: 
+  - shell: systemctl restart sshd 
+    register: results
+  - debug: 
+      var: results.cmd

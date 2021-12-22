@@ -1,0 +1,13 @@
+---
+- name: play with variables 
+  hosts: dev 
+  gather_facts: false
+  vars: 
+    a: 10 
+  tasks: 
+  - name:  Printing my value
+    debug: 
+      msg: "a: {{a}}" 
+  - name: Printing my value 
+    debug: 
+      var: a 

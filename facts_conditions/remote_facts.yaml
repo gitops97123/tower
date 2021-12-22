@@ -1,0 +1,9 @@
+---
+- name: 
+  hosts: dev 
+  tasks: 
+  - name: 
+    debug: 
+      msg: 
+        " {{ansible_hostname}} is on {{ ansible_default_ipv4.address }} \n
+          your kernel is {{ansible_cmdline.BOOT_IMAGE }}  " 

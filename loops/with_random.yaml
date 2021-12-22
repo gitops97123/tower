@@ -1,0 +1,13 @@
+--- 
+- hosts: dev 
+  tasks: 
+  vars: 
+    my_list: 
+      - one
+      - two
+  tasks:
+  - name: with_random_choice
+    debug:
+      msg: "{{ item }}"
+    with_random_choice: "{{ my_list }}"
+    

@@ -1,0 +1,13 @@
+--- 
+- name: 
+  hosts: dev 
+  tasks: 
+  - name: checking total memory 
+    debug:  
+      msg: "{{ansible_memtotal_mb}}"
+  - name: delete vedik user 
+    user: 
+      name: vedik 
+      state: absent
+      remove: yes 
+    when: ansible_memtotal_mb < 1500

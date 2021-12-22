@@ -1,0 +1,17 @@
+---
+- name: 
+  hosts: dev
+  gather_facts: false 
+  tasks: 
+  - name: delete some users
+    user: 
+      name: "{{ item }}" 
+      state: absent
+      remove: yes 
+    loop: 
+      - user1 
+      - user2 
+      - testuser1
+      - testuser2
+   
+

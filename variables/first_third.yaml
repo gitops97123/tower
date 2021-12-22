@@ -1,0 +1,17 @@
+---
+- name: 
+  hosts: dev
+  vars_prompt:
+    - name: usr 
+      prompt: "enter username " 
+      private: no 
+    - name: pw 
+      prompt: "enter password " 
+      private: yes 
+  tasks: 
+  - name: create new user {{usr}} 
+    user: 
+      name: "{{usr}}"
+      password: "{{ pw | password_hash('sha512') }}"
+      update_password: always
+      state: present

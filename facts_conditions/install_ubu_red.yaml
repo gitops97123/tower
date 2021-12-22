@@ -1,0 +1,15 @@
+---
+- name: 
+  hosts: 
+    - dc 
+    - dev 
+  vars: 
+    supported_distros: 
+      - RedHat 
+      - Ubuntu
+  tasks: 
+  - name: Installing Latest ftp Packages
+    yum: 
+      name:  ftp
+      state: absent
+    when: ansible_distribution in supported_distros 

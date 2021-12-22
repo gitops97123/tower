@@ -1,0 +1,24 @@
+---
+- name: 
+  hosts: dev
+  gather_facts: false 
+  tasks: 
+  - name: Listing Group hosts
+    debug:
+      msg: "{{ item }}"
+    loop: "{{ groups['all'] }}"
+    tags: 
+      - list
+ # show all the hosts in the current play
+  - name: Query Play hostname
+    debug:
+      msg: "{{ item }}"
+    loop: "{{ ansible_play_batch }}"
+    tags: 
+      - query_play
+  - name: Query inventory hostname
+    debug:
+      msg: "{{ item }}"
+    loop: "{{ query('inventory_hostnames', 'all') }}"
+    tags: 
+      - query_host

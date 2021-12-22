@@ -1,0 +1,11 @@
+---
+- name: 
+  hosts: dev 
+  vars_files: 
+    - uservar.yaml
+  tasks: 
+  - name: delete user 
+    user: 
+      name: "{{u}}"
+      state: absent
+      remove: yes 

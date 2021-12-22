@@ -1,0 +1,13 @@
+--- 
+- name: 
+  hosts: dev
+  tasks: 
+  - name: You can register the output of a loop as a variable. 
+    shell: "echo {{ item }}"
+    loop: 
+      - "one"
+      - "two" 
+    register: out
+  - name: print output 
+    debug: 
+      var: out
