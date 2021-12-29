@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: development # dev haproxy_nodes development datacenter 
+  hosts: JumpHost1 # dev haproxy_nodes development datacenter 
   tasks: 
   - name: Display IP Address 
     debug: 
